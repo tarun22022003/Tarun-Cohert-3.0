@@ -1,0 +1,22 @@
+@font-face {
+    font-family: hello;
+    src: url(./British\ Letter.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: red;
+    background-color: aqua;
+    font-size: 50px;
+    font-family: hello;
+}
