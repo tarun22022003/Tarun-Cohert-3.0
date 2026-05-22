@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: 0.8fr 1fr 1fr 1fr;
+  
+  /* 4 Rows: Configured explicitly to match the design's unique vertical blocks */
+  grid-template-rows: 230px 120px 140px 250px;
+  background-color: black;
+  gap: 10px;
+  padding: 20px;
+  /* border: 1px solid grey; */
+  border-radius: 15px;
+  grid-template-areas:
+    "top1 top2 top3 top4"
+    "top1 center2 center2 top4"
+    "center1 center2 center2 bottom4"
+    "bottom1 bottom1 bottom2 bottom4";
+}
+.top1 {
+  background-color: rgb(246, 156, 38);
+  grid-area: top1;
+  border-radius: 15px;
+}
+.top2 {
+  background-color: rgb(167, 244, 14);
+  grid-area: top2;
+  border-radius: 15px;
+  /* height: 10%; */
+}
+.top3 {
+  background-color: rgb(136, 88, 4);
+  grid-area: top3;
+  border-radius: 15px;
+}
+.top4 {
+  background-color: rgb(253, 24, 223);
+  grid-area: top4;
+  border-radius: 15px;
+}
+.center1 {
+  background-color: rgb(253, 253, 253);
+  grid-area: center1;
+  border-radius: 15px;
+  padding-left: 25px;
+  font-size: 10px;
+  padding-top: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: left;
+  gap: 15px;
+}
+.center1_1 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+}
+.image_logo {
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.center1_1 img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.center2 {
+  background-color: rgb(252, 251, 252);
+  grid-area: center2;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+.center2 img {
+  height: 100%;
+  width: 120%;
+}
+.bottom1 {
+  background-color: rgb(235, 176, 162);
+  grid-area: bottom1;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 18px;
+  gap: 50px;
+}
+.image1 {
+  border: 1px solid grey;
+  width: 400px;
+  background-color: black;
+  display: flex;
+  overflow: hidden;
+  border-radius: 25px;
+
+}
+.image1 img {
+  width: 90%;
+  object-fit: cover;
+  display: block;
+
+  border-radius: 0;
+}
+.content{
+    display: flex;
+    flex-direction:column;
+
+}
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+    /* flex-wrap: wrap; */
+        /* overflow: hidden; */
+}
+.trainerimage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    margin-left: -20px;
+}
+.images img{
+    /* height:100%; */
+    width: 100%;
+    border-radius: 50%;
+    /* object-fit: cover; */
+}
+.note{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    height: 120px;
+}
+.trainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 00px; */
+    height: 100px;
+    gap: 80px;
+}
+.trainer div h1{
+    font-size: 50px;
+}
+.trainer div sup{
+    font-size: 29px;
+}
+.trainer h4{
+    font-size: large;
+    /* width: 140px; */
+}
+
+
+
+
+.bottom2 {
+  background-color: rgb(225, 88, 20);
+  grid-area: bottom2;
+  border-radius: 15px;
+}
+.bottom4 {
+  background-color: rgb(10, 241, 91);
+  grid-area: bottom4;
+  border-radius: 15px;
+}
