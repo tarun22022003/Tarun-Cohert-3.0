@@ -1,0 +1,114 @@
+Functions
+Easy
+Write a function to add two numbers.
+Write a function to check whether a number is even or odd.
+Write a function to find the square of a number.
+Write a function that returns the larger of two numbers.
+Write a function to convert Celsius to Fahrenheit.
+
+Medium
+Write a function to count vowels in a string.
+Write a function to reverse a string.
+Write a function to check if a string is a palindrome.
+Write a function to calculate factorial of a number.
+Write a function to find the sum of digits of a number.
+
+Challenging
+Write a recursive function for factorial.
+Write a recursive function for Fibonacci series.
+Write a function that accepts another function as an argument.
+Create your own implementation of map().
+Create your own implementation of filter().
+
+
+
+Arrays
+Easy
+Find the largest element in an array.
+Find the smallest element in an array.
+Calculate the sum of all elements.
+Count the number of even numbers.
+Reverse an array.
+
+
+Medium
+Remove duplicate elements from an array.
+Find the second largest number.
+Sort an array in ascending order.
+Merge two arrays.
+Find common elements between two arrays.
+
+
+Challenging
+Rotate an array by k positions.
+Find missing numbers in an array.
+Find the frequency of each element.
+Move all zeros to the end.
+Flatten a nested array.
+
+Example:
+
+[1,2,[3,4],[5,[6,7]]]
+
+Output:
+
+[1,2,3,4,5,6,7]
+
+
+
+Objects
+Easy
+Create a student object with name, age, and marks.
+Print all keys of an object.
+Print all values of an object.
+Check if a property exists in an object.
+Count the number of properties in an object.
+
+
+Medium
+Find the employee with the highest salary.
+[
+ {name:"A",salary:50000},
+ {name:"B",salary:80000},
+ {name:"C",salary:60000}
+]
+Convert an object into an array.
+Merge two objects.
+Sort objects by age.
+Find the average marks of students.
+Challenging
+Group people by age.
+
+Input:
+
+[
+ {name:"A",age:20},
+ {name:"B",age:21},
+ {name:"C",age:20}
+]
+
+Output:
+
+{
+ 20:["A","C"],
+ 21:["B"]
+}
+Count word frequency using an object.
+Deep copy an object.
+Create a shopping cart object.
+Create a library management system using objects.
+
+
+
+
+Mixed Interview-Level Questions
+Find duplicate elements in an array.
+Find the first non-repeating character in a string.
+Find the most frequent element in an array.
+Remove all duplicate characters from a string.
+Sort an array of objects by multiple properties.
+Implement a simple To-Do List using arrays and objects.
+Create a student management system using CRUD operations.
+Build a contact book using arrays and objects.
+Create a shopping cart with add, remove, update quantity.
+Create a quiz application using objects and functions.

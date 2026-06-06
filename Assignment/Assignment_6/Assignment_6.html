@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two Leaves and a Bud | Organic Tea</title>
+    <link rel="stylesheet" href="./Assignment_6.css" />
+    <link rel="stylesheet" href="./Assignment_6_1.css" />
+  </head>
+  <body>
+    <div class="nav_1"><h3>FREE US SHIPPING FOR ORDERS OVER $75</h3></div>
+    <div class="slider">
+       <button id="arrow">></button>
+       <img class="slidefirst"
+        src="https://www.twoleavestea.com/cdn/shop/files/cere-memorial_matcha_wide.png?v=1779304660&width=2700.0">
+       <img class="slidesecond"
+        src="https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2700.0">
+
+   
+    
+</div>
+      <!-- <div class="nav_2">
+        <div class="nav_2_part1">
+          <div class="shopicon">Shop </div>
+        </div>
+        <div class="nav_2_part2">
+          <a href="./Assignment_6.html"><img src="./Attachments/logoblure.png" alt="logo" class="logo"
+          /></a>
+        </div>
+        <div class="nav_2_part3">3</div>
+      </div> -->
+  <script>
+
+const slider = document.querySelector(".slider");
+const arrow = document.querySelector("#arrow");
+
+let currentSlide = 0;
+
+arrow.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (currentSlide === 0) {
+        slider.scrollTo({
+            left: slider.clientWidth,
+            behavior: "smooth"
+        });
+
+        currentSlide = 1;
+        arrow.classList.add("left");
+        arrow.textContent = "<";
+    } else {
+        slider.scrollTo({
+            left: 0,
+            behavior: "smooth"
+        });
+
+        currentSlide = 0;
+        arrow.classList.remove("left");
+        arrow.textContent = ">";
+    }
+});
+  </script>
+  </body>
+</html>
