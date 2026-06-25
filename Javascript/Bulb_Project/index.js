@@ -103,5 +103,26 @@
 // let name = fn_2(fn_1);
 // console.log(name)
 
+const bulb = document.querySelector(".bulb");
+const btn = document.querySelector(".btn");
+    let flag=0;
+
+btn.addEventListener("click",()=>{
+
+    if(flag===0){
+    bulb.style.backgroundColor="yellow";
+    btn.textContent="OFF";
+    flag=1;
+    }
+    else{
+    bulb.style.backgroundColor="white";
+    btn.textContent="ON";
+    flag=0;
+    }
+
+
+
+})
+
 
 

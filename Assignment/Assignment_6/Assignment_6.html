@@ -9,56 +9,48 @@
   </head>
   <body>
     <div class="nav_1"><h3>FREE US SHIPPING FOR ORDERS OVER $75</h3></div>
+      <div class="nav_2">
+      <div class="nav_2_part1">
+        <div class="shopicon">
+          <div class="shop dropdown_1">Shop <div class="dropdown_2">></div></div>
+          <div class="learn  dropdown_1">Learn <div class="dropdown_2">></div></div>
+          <div class="Reviews  dropdown_1">Reviews <div class="dropdown_2 star">⭐</div></div>
+        </div>
+      </div>
+      <div class="nav_2_part2">
+        <a href="./Assignment_6.html"
+          ><img src="./Attachments/logoblure.png" alt="logo" class="logo"
+        /></a>
+      </div>
+      <div class="nav_2_part3">
+        <div class="first">MY ACCOUNT</div>
+        <div class="first">CAFE & WHOLESALE PARTNERS</div>
+        <div class="first">TEA JOURNAL</div>
+        <div class="first"><img src="./Attachments/cart.png" alt="" class="cart"></div>
+      </div>
+    </div>
+    <div class="textbox">
+      <div class="textbox_sub">
+      <p id="boldtext">Meet Your <br> Matcha</p>
+      <h5 id="sub_boldtext">Whether your mornings are more grab-and-go or intentional <br> and slow, we have matcha and matcha lattes for every ritual.</h5>
+      <button class="shopnow">Shop Now</button>
+      </div>
+    </div>
+    <div class="down_arrow">
+      ↓
+    </div>
     <div class="slider">
-       <button id="arrow">></button>
-       <img class="slidefirst"
-        src="https://www.twoleavestea.com/cdn/shop/files/cere-memorial_matcha_wide.png?v=1779304660&width=2700.0">
-       <img class="slidesecond"
-        src="https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2700.0">
+      <button id="arrow">></button>
 
+      <img
+        class="slidefirst"
+        src="https://www.twoleavestea.com/cdn/shop/files/cere-memorial_matcha_wide.png?v=1779304660&width=2700.0"/>
    
-    
-</div>
-      <!-- <div class="nav_2">
-        <div class="nav_2_part1">
-          <div class="shopicon">Shop </div>
-        </div>
-        <div class="nav_2_part2">
-          <a href="./Assignment_6.html"><img src="./Attachments/logoblure.png" alt="logo" class="logo"
-          /></a>
-        </div>
-        <div class="nav_2_part3">3</div>
-      </div> -->
-  <script>
-
-const slider = document.querySelector(".slider");
-const arrow = document.querySelector("#arrow");
-
-let currentSlide = 0;
-
-arrow.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    if (currentSlide === 0) {
-        slider.scrollTo({
-            left: slider.clientWidth,
-            behavior: "smooth"
-        });
-
-        currentSlide = 1;
-        arrow.classList.add("left");
-        arrow.textContent = "<";
-    } else {
-        slider.scrollTo({
-            left: 0,
-            behavior: "smooth"
-        });
-
-        currentSlide = 0;
-        arrow.classList.remove("left");
-        arrow.textContent = ">";
-    }
-});
-  </script>
+      <img
+        class="slidesecond"
+        src="https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2700.0"
+      />
+    </div>
+<script src="./Assignment_6.js"></script>
   </body>
 </html>

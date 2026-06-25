@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO_DO_List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="heading">To Do List</div>
+      <div class="taskinput">
+        <input type="text" class="textfield" placeholder="Add a New Task" />
+        <button class="Add-btn">Add</button>
+      </div>
+      <div class="taskmanager"></div>
+    </main>
+
+    <!-- <script src="./script.js"></script> -->
+
+    <script>
+      const btn = document.querySelector(".Add-btn");
+      const inp = document.querySelector(".textfield");
+      const taskmanager = document.querySelector(".taskmanager");
+
+    btn.addEventListener("click",()=>{
+        const val = inp.value;
+
+    if (val.trim() === "") return;
+    taskmanager.innerHTML += `<div class='li'>
+       <h3>${val}</h3>
+    <div>
+       <button  class = "btn-edit"> Edit</button>
+       <button  class = "btn-del"> Delete</button>
+    </div>
+    </div>`;
+
+    inp.value="";
+      });
+
+    taskmanager.addEventListener("click", (e)=>{
+        if(e.target.classList.contains("btn-del")){
+        e.target.closest(".li").remove()}
+
+        if(e.target.classList.contains("btn-edit"))
+        {
+            const tasktext = e.target.closest(".li").querySelector("h3");
+            const newtask = prompt("Edit-text", tasktext.textContent);
+            if(newtask && newtask.trim() !== ""){
+                tasktext.textContent = newtask;
+            }
+
+        }
+    })
+    </script>
+  </body>
+</html>

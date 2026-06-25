@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.bulb{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius: 50%;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    border-radius: 30PX;
+    background-color: aquamarine;
+}
