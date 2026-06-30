@@ -2,6 +2,7 @@ const create = document.querySelector(".create");
 const cross = document.querySelector(".cross");
 const input_form = document.querySelector(".card");
 const form = document.querySelector("form");
+const create_btn = document.querySelector(".form_create");
 const producT_card = document.querySelector(".collection");
 
 create.addEventListener("click", () => {
@@ -11,7 +12,7 @@ cross.addEventListener("click", () => {
   input_form.style.display = "none";
 });
 
-let collection = [];
+let collection = JSON.parse(localStorage.getItem("products")) ||[];
 let updateIndex = null;
 
 let show_card = function () {
@@ -56,8 +57,11 @@ form.addEventListener("submit", (event) => {
   if (updateIndex !== null) {
     collection[updateIndex] = obj;
     updateIndex = null;
+    create_btn.textContent="Create Card";
+    localStorage.setItem("products", JSON.stringify(collection));
   } else {
     collection.push(obj);
+    localStorage.setItem("products", JSON.stringify(collection));
   }
 
   show_card();
@@ -73,10 +77,13 @@ const updateProduct = (unique_id) => {
   form[0].value = update_collection.name;
   form[1].value = update_collection.price;
   form[2].value = update_collection.image;
+  create_btn.textContent="Update Card";
+
 };
 const deleteProduct = (delete_id) => {
   delete_id = Number(delete_id);
   collection.splice(delete_id, 1);
+  localStorage.setItem("products", JSON.stringify(collection));
 
   show_card();
 };
