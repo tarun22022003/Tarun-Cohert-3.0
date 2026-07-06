@@ -7,7 +7,6 @@ const newName = document.querySelector(".UserNameDisplay");
 const symbol = document.querySelectorAll(".symbol");
 const logut = document.querySelector(".logoutBtn");
 
-
 let User_accountDetails = JSON.parse(localStorage.getItem("Users")) || [];
 
 let userData = (event) => {
@@ -51,25 +50,32 @@ let changeUserDetails = (event) => {
   return newDetails;
 };
 
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+if (currentUser) {
+  newName.textContent = currentUser.fullName;
+  symbol.forEach((item) => {
+    item.textContent = currentUser.currencySymbol;
+  });
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   if (form.id === "login") {
     let loginObject = loginDetails(event);
     let loggedInUser = User_accountDetails.find((elem) => {
-        return (
-            elem.Email === loginObject.userEmail &&
-            elem.Password === loginObject.userPassword
-        );
+      return (
+        elem.Email === loginObject.userEmail &&
+        elem.Password === loginObject.userPassword
+      );
     });
 
     if (loggedInUser) {
-        localStorage.setItem("currentUser", JSON.stringify(loggedInUser));
-       
-        
-        window.location.replace("home.html");
+      localStorage.setItem("currentUser", JSON.stringify(loggedInUser));
 
+      window.location.replace("home.html");
     } else {
-        alert("No such Username Found!");
+      alert("No such Username Found!");
     }
   }
 
@@ -80,14 +86,30 @@ form.addEventListener("submit", (event) => {
     console.log(User_accountDetails);
   }
   if (form.id === "changes") {
-    const savedSettings = JSON.parse(localStorage.getItem("userSettings"));
-
     let newChanges = changeUserDetails(event);
-    newName.textContent = newChanges.changedName;
-    symbol.forEach((item) => {
-      item.textContent = newChanges.changedCurr[5];
+    let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    currentUser.fullName = newChanges.changedName;
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    let users = JSON.parse(localStorage.getItem("Users")) || [];
+    let newSymbol = newChanges.changedCurr[5];
+
+    currentUser.fullName = newChanges.changedName;
+    currentUser.currencySymbol = newSymbol;
+
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+    users.forEach((user) => {
+      if (user.Email === currentUser.Email) {
+        user.fullName = currentUser.fullName;
+        user.currencySymbol = newSymbol;
+      }
     });
-    alert('Changes have been saved!')
+
+    localStorage.setItem("Users", JSON.stringify(users));
+
+    symbol.forEach((item) => {
+      item.textContent = newSymbol;
+    });
   }
   form.reset();
 });

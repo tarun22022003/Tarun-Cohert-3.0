@@ -22,8 +22,10 @@ countTransc.textContent = transCount;
 
 let newBalance = Number(localStorage.getItem("currentBalance")) || 0;
 let newExpense = Number(localStorage.getItem("totalExpense")) || 0;
+let newIncome = Number(localStorage.getItem("totalIncome")) || 0;
 balanceBox.textContent=newBalance;
 expenseBox.textContent=newExpense;
+incomeBox.textContent=newIncome;
 let storedata = (event) => {
   let transtype = event.target[0].value;
   let transdescription = event.target[1].value;
@@ -76,6 +78,15 @@ transactionBoxSubmit.addEventListener("submit", (event) => {
     balanceBox.textContent=newBalance;
     expenseBox.textContent=newExpense;
 
+  }
+
+  if(transDetailsData.transtype==="Income"){
+    newIncome+=Number(transDetailsData.transamount);
+    newBalance +=Number(transDetailsData.transamount);
+    localStorage.setItem("totalIncome", newIncome);
+    localStorage.setItem("currentBalance", newBalance);
+    incomeBox.textContent=newIncome;
+    balanceBox.textContent=newBalance;
   }
 
 
