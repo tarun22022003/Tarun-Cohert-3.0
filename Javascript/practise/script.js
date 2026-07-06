@@ -104,21 +104,23 @@
 
     // sum(1,2,3,4,5,5,6,6,6,7,5);
 
-    let users = [
-        {name:"Ritik", age:20},
-        {name:"Aman", age:16},
-        {name:"Priya", age:25},
-    ]
+    // let users = [
+    //     {name:"Ritik", age:20},
+    //     {name:"Aman", age:16},
+    //     {name:"Priya", age:25},
+    // ]
 
-    let result =[]
+    // let result =[]
 
-    let getadults = (input)=>{
-        for(let i=0; i<input.length; i++){
-            if(input[i].age>=18){
-                result.push(input[i])
-            }
-        }
-        console.log(result);
-    }
+    // let getadults = (input)=>{
+    //     for(let i=0; i<input.length; i++){
+    //         if(input[i].age>=18){
+    //             result.push(input[i])
+    //         }
+    //     }
+    //     console.log(result);
+    // }
 
-    getadults(users);
+    // getadults(users);
+
+    

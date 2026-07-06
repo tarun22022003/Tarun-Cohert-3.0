@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinTrack Pro Dashboard</title>
+
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- ================= Sidebar ================= -->
+
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-layer-group"></i>
+
+          <div>
+            <h2>Tarun's FinTrack Pro</h2>
+            <span>Enterprise Finance</span>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#" class="active">
+            <i class="fa-solid fa-table-columns"></i>
+            Dashboard
+          </a>
+
+          <a  class="homeSetting" href="#">
+            <i ></i>
+            Settings
+          </a>
+        </nav>
+
+        <button class="add-btn">
+          <i class="fa-solid fa-plus"></i>
+          Add Transaction
+        </button>
+      </aside>
+
+      <!-- ================= Main ================= -->
+
+      <main class="main">
+        <!-- Top Bar -->
+
+        <header class="topbar">
+          <div></div>
+
+          <div class="profile">
+            <span class="UserNameDisplay">Tarun@2202</span>
+
+            <button class="logoutBtn">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Logout
+            </button>
+          </div>
+        </header>
+
+        <!-- Heading -->
+
+        <section class="heading">
+          <h1>Financial Overview</h1>
+
+          <p>Real-time tracking application</p>
+        </section>
+
+        <!-- Summary Cards -->
+
+        <section class="cards">
+          <div class="card">
+            <div class="icon blue">
+           
+            </div>
+
+            <p>Current Balance</p>
+
+            <h2 class="symbol">$</h2><h2 id="balance">0.00</h2>
+          </div>
+
+          <div class="card">
+            <div class="icon green">
+            </div>
+
+            <p>Total Income</p>
+
+            <h2 class="symbol">$</h2><h2 id="income">0.00</h2>
+          </div>
+
+          <div class="card">
+            <div class="icon red">
+            </div>
+
+            <p>Total Expense</p>
+
+            <h2 class="symbol">$</h2><h2 id="expense">0.00</h2>
+          </div>
+
+          <div class="card">
+            <div class="icon purple">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <p id="transc">Total Transactions</p>
+
+            <h2 id="transactionCount">0</h2>
+          </div>
+        </section>
+
+        <!-- Analysis -->
+
+        <section class="content">
+          <div class="chart">
+            <h2>Cash Flow Analysis</h2>
+
+            <div class="graph">
+              <p>Chart Area</p>
+            </div>
+          </div>
+
+          <div class="preferences">
+            <h2>Preferences</h2>
+
+            <div class="dark-mode">
+              <span>Dark Mode</span>
+
+              <label class="switch">
+                <input type="checkbox" />
+
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <button class="reset-btn">
+              <i class="fa-solid fa-trash"></i>
+
+              Reset All Data
+            </button>
+          </div>
+        </section>
+
+        <!-- Transactions -->
+
+        <section class="transactions">
+          <h2>All Transactions</h2>
+
+          <div class="filter">
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+              <input type="text" placeholder="Search transactions..." />
+            </div>
+
+            <select>
+              <option>All Types</option>
+
+              <option>Income</option>
+
+              <option>Expense</option>
+            </select>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+
+                <th>Description</th>
+
+                <th>Category</th>
+
+                <th>Amount</th>
+
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td colspan="5" class="empty">No transactions found.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+      <div class="settings">
+        <div class="main_container">
+          <div class="topHead">
+            <h1>Settings</h1>
+
+            <p>Manage your account profile and app formatting.</p>
+          </div>
+
+          <div class="DetailsUpdate">
+            <h2>Profile Details</h2>
+
+            <form id="changes">
+              <div class="form-group">
+                <div class="input-box">
+                  <label>Full Name</label>
+
+                  <input
+                    type="text"
+                    placeholder="Enter Full Name"
+                    
+                  />
+                </div>
+
+                <div class="input-box">
+                  <label>Primary Currency</label>
+
+                  <select>
+                    <option>USD ($)</option>
+                    <option>EUR (€)</option>
+                    <option>GBP (£)</option>
+                    <option >INR (₹)</option>
+                    <option>JPY (¥)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="overlay">
+      <form id="transactionBox">
+    <div class="mainContainer">
+        <div class="mainHeading">
+            <div>Add Transaction</div>
+            <div id="close">x</div>
+        </div>
+        <div class="type">
+          <label >Type</label>
+          <select >
+            <option selected>Expense</option>
+            <option >Salary</option>
+          </select>
+          
+        </div>
+        <div class="description">
+            <label >Description</label>
+            <input type="text" required placeholder="e.g. Amazon, Salary, coffee">
+        </div>
+        <div class="amtDate">
+            <div class="amount">
+                <label >Amount</label>
+                <input required type="number">
+            </div>
+            <div class="date">
+                <label>Date</label>
+                <input required type="date">
+            </div>
+        </div>
+        <div class="category">
+            <label >Category</label>
+            <select >
+                <option selected>Select a category</option>
+                <option >Food And Dining</option>
+                <option >Shopping</option>
+                <option >Recharges & Bills</option>
+                <option >Petrol & Auto</option>
+                <option >Utilities</option>
+                <option >Salary</option>
+                <option >Entertainment</option>
+                <option >Others</option>
+            </select>
+        </div>
+        <button class="savetransc">Save Transaction</button>
+    </div>
+    </form>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
+  </body>
+</html>
