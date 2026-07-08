@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multi_Task_Zone</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <main>
       <div class="heading">
@@ -16,7 +18,7 @@
         </p>
       </div>
       <div class="motivationalQuotes">
-        <h3>motivationalQuotes</h3>
+        <h3>✨ Quotes that might make your day! ✨</h3>
       </div>
 
       <div class="main2">
@@ -45,64 +47,146 @@
     <!-- Daily Planner -->
     <div class="dailyplanner">
       <div class="mainbox">
-        <div class="topNav">
-          <div class="mainhead"><h1>Daily Planner</h1></div>
-          <div class="daydate">
-            <input type="date" />
-            <div class="days">
-              <div>S</div>
-              <div>M</div>
-              <div>T</div>
-              <div>W</div>
-              <div>T</div>
-              <div>F</div>
-              <div>S</div>
+        <form class="schduleForm">
+          <div class="topNav">
+            <div class="mainhead">
+              <h1>Daily Planner</h1>
+            </div>
+            <div class="daydate">
+              <input name="Date" type="date" />
+              <div class="days">
+                <div>S</div>
+                <div>M</div>
+                <div>T</div>
+                <div>W</div>
+                <div>T</div>
+                <div>F</div>
+                <div>S</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="midNav">
-          <div class="schduleForm">
-            <form id="schduleForm">
+          <div class="midNav">
+
+            <div id="schduleForm">
               <h2>TODAY'S SCHEDULE</h2>
-              <h4>6 am <input type="text" /></h4>
-              <h4>8 am <input type="text" /></h4>
-              <h4>10 am <input type="text" /></h4>
-              <h4>12 pm <input type="text" /></h4>
-              <h4>2 pm <input type="text" /></h4>
-              <h4>4 pm <input type="text" /></h4>
-              <h4>6 pm <input type="text" /></h4>
-              <h4>8 pm <input type="text" /></h4>
-            </form>
-          </div>
-          <div class="prioritiesTOdo">
-            <div class="prior">
-              <h2>PRIORITIES</h2>
-              <textarea name="" id=""></textarea>
+              <h4>6 am <input name="6 am" type="text" /></h4>
+              <h4>8 am <input name="8 am" type="text" /></h4>
+              <h4>10 am <input name="10 am" type="text" /></h4>
+              <h4>12 pm <input name="12 pm" type="text" /></h4>
+              <h4>2 pm <input name="2 pm" type="text" /></h4>
+              <h4>4 pm <input name="4 pm" type="text" /></h4>
+              <h4>6 pm <input name="6 pm" type="text" /></h4>
+              <h4>8 pm <input name="8 pm" type="text" /></h4>
+
             </div>
-            <div class="todoDaily">
-              <input id="checkBox" type="checkbox" />
-              <input id="noteToDo" type="text" />
-              <br />
-              <input id="checkBox" type="checkbox" />
-              <input id="noteToDo" type="text" />
-              <br />
-              <input id="checkBox" type="checkbox" />
-              <input id="noteToDo" type="text" />
-              <br />
-              <input id="checkBox" type="checkbox" />
-              <input id="noteToDo" type="text" />
+            <div class="prioritiesTOdo">
+              <div class="prior">
+                <h2>PRIORITIES</h2>
+                <textarea name="priorityTask" id=""></textarea>
+              </div>
+              <div class="todoDaily">
+                <div class="todoItem">
+                  <input class="checkBox" type="checkbox">
+                  <input name="todo1" class="noteToDo" type="text" placeholder="Enter task">
+                </div>
+
+                <div class="todoItem">
+                  <input class="checkBox" type="checkbox">
+                  <input name="todo2" class="noteToDo" type="text" placeholder="Enter task">
+                </div>
+
+                <div class="todoItem">
+                  <input class="checkBox" type="checkbox">
+                  <input name="todo3" class="noteToDo" type="text" placeholder="Enter task">
+                </div>
+
+                <div class="todoItem">
+                  <input class="checkBox" type="checkbox">
+                  <input name="todo4" class="noteToDo" type="text" placeholder="Enter task">
+                </div>
+              </div>
             </div>
           </div>
+          <div class="submitDailyPlanner">
+            <button type="submit" id="submitPlanner">Submit</button>
+            <button type="button" id="resetPlanner">Reset</button>
+            <button type="button" id="closePlanner">Close</button>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+
+    <!-- Pomodoro_Timer -->
+    <div class="PomodoroTimer">
+      <div class="mainpomo">
+        <div class="pomoHeading">
+          <h1>⚡ Productivity Countdown</h1>
+          <h2 class="closepomo">X</h2>
         </div>
-        <div class="submitDailyPlanner">
-          <button id="submitPlanner">Submit</button>
-           <button id="resetPlanner">Reset</button>
-          <button id="closePlanner">Close</button>
-         
+        <div class="pomoTimer">
+          <h1 class="tiktok">25:00</h1>
+          <button class="startpomo">START</button>
+          <button class="pausepomo">PAUSE</button>
+          <button class="resetpomo">RESET</button>
         </div>
       </div>
     </div>
+
+
+    <!-- Motivational quotes -->
+
+    <!-- Motivational Quotes -->
+
+    <div class="quotesPage">
+
+      <div class="quotesContainer">
+
+        <div class="quotesHeader">
+
+          <div>
+            <h1>✨ Daily Inspiration</h1>
+            <p>Fuel your day with a positive mindset.</p>
+          </div>
+
+          <div class="closeQuotes">
+            ✕
+          </div>
+
+        </div>
+
+        <div class="quotesBody">
+
+          <div class="quoteIcon">
+            ❝
+          </div>
+
+          <h2 id="quoteText">
+            Loading Quote...
+          </h2>
+
+          <h3 id="quoteAuthor">
+
+          </h3>
+
+        </div>
+
+        <div class="quotesFooter">
+
+          <button id="newQuote">
+            🔄 New Quote
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
     <script src="./script1.js"></script>
     <script src="./script2.js"></script>
   </body>
+
 </html>
