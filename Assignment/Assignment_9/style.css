@@ -386,7 +386,7 @@ main{
     position:fixed;
     inset:0;
 
-    display:flex;          /* Show with JS: display:flex */
+    display:none;          /* Show with JS: display:flex */
 
     justify-content:center;
     align-items:center;
