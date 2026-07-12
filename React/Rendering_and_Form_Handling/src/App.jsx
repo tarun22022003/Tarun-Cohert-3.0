@@ -1,36 +1,22 @@
-import { useState } from "react";
+import React ,{useState} from 'react'
+import Navbar from './components/Navbar'
+import Login from './components/Login'
+import Register from './components/Register'
 
 const App = () => {
-  const [count, setCount] = useState(0);
-  const [user, setUser] = useState({
-    name: "Tarun",
-  });
+  const [toggle, setToggle] = useState(true)
+  const [login, setLogin] = useState(false)
 
   return (
-    <div>
-      <h1>Count is -- {count}</h1>
-      <h1>Name is --- {user.name}</h1>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Count Increase
-      </button>
-      <button
-        onClick={() => {
-          setUser({name:"Joshi"})
-          // user.name = "Joshi";
-          // setUser(user);
-          // YE bhi name update krdeta, par isse rerender nhi mila kuyki setUSer call krke value same h but agr ham setCount call krde tav bhi app rerender hojaega aur name update hojaega!
-          // iska mtlv ye h ki kisi bhi useState ko call krke dusri reference value ko update krwa sakte ho rerender krwakr!
-          // // this won't update the name as user.name is a reference datatype and thus when setUser is called the user holds it's original value which do not gets updated.
-        }}
-      >
-        Change Name
-      </button>
+    <div className='p-5 h-screen w-screen bg-cyan-400'>
+      <Navbar setLogin={setLogin}/>
+      <div className={`${login?"":"hidden"}`}>
+      <div className=' left-140 top-50 absolute'>
+        {toggle?<Login setToggle={setToggle} />:<Register setToggle={setToggle}/>}
+      </div>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
