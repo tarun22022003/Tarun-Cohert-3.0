@@ -1417,6 +1417,7 @@ main {
 
 .addGoal {
   margin-top: 20px;
+  gap: 10px;
 
   display: flex;
 
@@ -1442,6 +1443,28 @@ main {
 }
 
 #addnewGoal:hover {
+  background: #005fd1;
+}
+
+#deleteAllGoal {
+  padding: 14px 35px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: #007bff;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+#deleteAllGoal:hover {
   background: #005fd1;
 }
 

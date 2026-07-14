@@ -6,6 +6,7 @@ const goalsForm = document.querySelector(".goalsForm");
 const closeCreate = document.querySelector("#closeCreate");
 const goalcreateForm = document.querySelector("#goalcreateForm");
 const goalsCard = document.querySelector(".goalsCard");
+const deleteAllGoal = document.querySelector("#deleteAllGoal");
 
 dailyGoal.addEventListener("click", () => {
   dailyGoals.style.display = "flex";
@@ -23,6 +24,15 @@ closeCreate.addEventListener("click", (e) => {
   goalsForm.style.display = "none";
 });
 
+
+deleteAllGoal.addEventListener("click",()=>{
+  goalData = [];
+  localStorage.setItem("Goals", JSON.stringify(goalData));
+
+  displayGoal();
+})
+
+
 let goalData = JSON.parse(localStorage.getItem("Goals")) || [];
 
 let displayGoal = function () {
@@ -32,7 +42,7 @@ let displayGoal = function () {
             <h1 id="goalCardHead">${elem.head}</h1>
             <p id="goalCardDesc">${elem.description}</p>
             <div class="cardbutton">
-              <button id="goalComplete">Completed</button>
+              <button onclick="completedGoal(this)" id="goalComplete">Completed</button>
               <button onclick="deleteGoal(${elem.id})" id="goalDelete">Delete</button>
             </div>
           </div>`;
@@ -64,8 +74,18 @@ goalcreateForm.addEventListener("submit", (event) => {
 });
 
 const deleteGoal = (delete_id) => {
- goalData = goalData.filter(goal => goal.id !== delete_id);
+  goalData = goalData.filter((goal) => goal.id !== delete_id);
   localStorage.setItem("Goals", JSON.stringify(goalData));
 
   displayGoal();
 };
+
+const completedGoal = (button) => {
+  const card = button.closest(".dailyGoalsCard");
+
+  card.style.background = "linear-gradient(135deg, #28a745, #66bb6a)";
+
+  button.textContent = "✓ Completed";
+  button.disabled = true;
+};
+
