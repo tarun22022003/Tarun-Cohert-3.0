@@ -21,7 +21,6 @@ const ResultCard = ({ item }) => {
         ) : (
           <video
             src={item.src}
-            autoPlay
             muted
             loop
             className="h-full w-full object-cover transition duration-500 group-hover:scale-110"

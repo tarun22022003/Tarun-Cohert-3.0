@@ -25,7 +25,7 @@ const Cart = () => {
   useEffect(() => {
     SetcartTotal(total.toFixed(2));
     SetitemTotal(itemCount);
-  }, [total, itemCount]);
+  }, [total,SetcartTotal,SetitemTotal, itemCount]);
 
   if (!cartOpen) return null;
 
@@ -179,7 +179,7 @@ const Cart = () => {
         </div>
       </div>
       {orderPlaced && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/60 backdrop-blur-sm">
           <div className="bg-zinc-900 border border-lime-400 rounded-2xl p-8 w-[90%] max-w-md text-center shadow-2xl animate-bounce">
             <div className="w-20 h-20 mx-auto rounded-full bg-lime-400 flex items-center justify-center text-4xl text-black font-bold">
               ✓
