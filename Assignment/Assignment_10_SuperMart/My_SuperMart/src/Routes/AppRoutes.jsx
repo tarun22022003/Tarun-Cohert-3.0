@@ -1,5 +1,5 @@
 import React from 'react'
-import Login from '../Components/login'
+import Login from '../Components/Login'
 import { Route, Routes } from "react-router";
 import Register from '../Components/Register';
 import Home from '../Components/Home';
